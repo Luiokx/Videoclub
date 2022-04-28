@@ -1,22 +1,15 @@
 package controlador;
 
-import javax.swing.JOptionPane;
+import vista.VerClientes;
+
+import javax.swing.*;
 import java.io.FileReader;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public class LoginController {
-
-    public void login(String user, String password) {
-        if (isExist(user, password)) {
-            JOptionPane.showMessageDialog(null, "OK");
-        } else {
-            JOptionPane.showMessageDialog(null, "El Usuario/Contraseña son incorrectos");
-        }
-    }
-
-    private boolean isExist(String user, String password) {
+    public boolean isExist(String user, String password) {
         boolean response = false;
         FileReader reader = null;
         BufferedReader bf = null;
